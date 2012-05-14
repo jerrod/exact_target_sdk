@@ -9,6 +9,7 @@ module ExactTargetSDK
 # each object easy.
 class APIObject
 
+  extend ActiveModel::Callbacks
   include ::ActiveModel::Validations
   include ::ActiveModel::Validations::Callbacks
 
