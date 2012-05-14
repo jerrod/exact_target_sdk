@@ -2,7 +2,7 @@ module ExactTargetSDK
 
 # Assumes that the "SubscriberKey feature" is not enabled on your account, and
 # thus explicitly sets the SubscriberKey to be the same as the EmailAddress
-# (and vice-versa). This allows all methods to be used without ever needing to 
+# (and vice-versa). This allows all methods to be used without ever needing to
 # refer to the SubscriberKey (just use EmailAddress).
 #
 # If the SubscriberKey is explicitly set, it will be left alone (in case you do
@@ -20,7 +20,7 @@ class Subscriber < APIObject
 
   before_validation :sync_subscriber_key_and_email_address
 
-  validates 'EmailTypePreference', :inclusion => { :allow_nil => true, :in => %w( HTML Text ) }
+  validates :EmailTypePreference, :inclusion => { :allow_nil => true, :in => %w( HTML Text ) }
 
   # private
 
