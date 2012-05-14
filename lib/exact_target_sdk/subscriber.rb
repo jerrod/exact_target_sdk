@@ -22,7 +22,7 @@ class Subscriber < APIObject
 
   validates :EmailTypePreference, :inclusion => { :allow_nil => true, :in => %w( HTML Text ) }
 
-  # private
+  private
 
   def sync_subscriber_key_and_email_address
     self.SubscriberKey = self.EmailAddress if self.SubscriberKey.nil?
