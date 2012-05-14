@@ -275,8 +275,8 @@ class Client
       timeout = ::ExactTargetSDK::TimeoutError.new("#{e.message}; open_timeout: #{config[:open_timeout]}; read_timeout: #{config[:read_timeout]}")
       timeout.set_backtrace(e.backtrace)
       raise timeout
-    rescue Exception => e
-      raise ::ExactTargetSDK::UnknownError, e
+    #rescue Exception => e
+    #  raise ::ExactTargetSDK::UnknownError, e
     end
   end
 
